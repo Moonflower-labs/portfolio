@@ -23,7 +23,7 @@ const Projects = () => {
         <ProjectItem
           img={beautyImg}
           title="Natural Theraphy"
-          link="     https://moonflower-labs.github.io/Moonflowerlabs/Paula/index.html"
+          link="https://moonflower-labs.github.io/Moonflowerlabs/Paula/index.html"
         />
 
         <ProjectItem

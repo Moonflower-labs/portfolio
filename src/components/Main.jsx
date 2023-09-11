@@ -44,6 +44,8 @@ const Main = () => {
             <a
               className="cursor-pointer hover:scale-110 ease-in duration-200"
               href="https://www.linkedin.com/feed/"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaLinkedin size={24} />
             </a>
@@ -51,6 +53,8 @@ const Main = () => {
             <a
               className="cursor-pointer hover:scale-110 ease-in duration-200"
               href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
             >
               <AiFillGithub size={24} />
             </a>
