@@ -3,14 +3,13 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { AiFillGithub, AiOutlineHtml5 } from "react-icons/ai";
 import { FaPython, FaCss3, FaLinkedin } from "react-icons/fa";
-
+import bgImage from "../assets/dbackground.jpeg";
 const Main = () => {
   return (
     <div id="main">
       <img
         className="w-full h-screen object-cover object-right"
-        src="/src/assets/dbackground.jpeg"
-        alt=""
+        src={bgImage}
       />
       <div className="w-full text-yellow-50 h-screen absolute top-0 left-0 bg-white/20">
         <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
