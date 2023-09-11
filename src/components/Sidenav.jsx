@@ -22,7 +22,10 @@ const Sidenav = () => {
         className="fixed top-4 right-4 z-[99] rounded-sm border-2 border-orange-300 text-orange-300  p-1  md:hidden"
       />
       {nav ? (
-        <div className="fixed top-0 left-0 w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20">
+        <div
+          onClick={handleNav}
+          className="fixed top-0 left-0 w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20"
+        >
           <a
             onClick={handleNav}
             href="#main"
