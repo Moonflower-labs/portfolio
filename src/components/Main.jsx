@@ -9,7 +9,7 @@ const Main = () => {
     <div id="main">
       <img
         className="w-full h-screen object-cover object-right"
-        src="/src/assets/dbackground.avif"
+        src="/src/assets/dbackground.jpeg"
         alt=""
       />
       <div className="w-full text-yellow-50 h-screen absolute top-0 left-0 bg-white/20">
