@@ -23,6 +23,7 @@ const Contact = () => {
               className="bg-gray-100 flex border-2 border-gray-300 rounded p-3 text-gray-700 focus:outline-none focus:bg-white focus:border-pink-600"
               name="name"
               type="text"
+              required
             />
           </div>
           <div className="flex flex-col">
@@ -40,6 +41,7 @@ const Contact = () => {
             className="bg-gray-100 border-2  p-3 flex  border-gray-300 rounded focus:outline-none focus:border-pink-600"
             name="email"
             type="email"
+            required
           />
         </div>
         <div className="flex flex-col py-2">
@@ -48,6 +50,7 @@ const Contact = () => {
             className="bg-gray-100 border-2 rounded p-3 flex  border-gray-300 focus:outline-none focus:border-pink-600"
             type="text"
             name="subject"
+            required
           />
         </div>
         <div className="flex flex-col py-2">
@@ -56,6 +59,7 @@ const Contact = () => {
             className="bg-gray-100 border-2 rounded-md p-3  border-gray-300 focus:outline-none focus:border-pink-600"
             name="message"
             rows="10"
+            required
           ></textarea>
         </div>
         <div className="flex flex-col">
