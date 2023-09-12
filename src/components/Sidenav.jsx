@@ -67,25 +67,25 @@ const Sidenav = () => {
         <div className="flex flex-col">
           <a
             href="#main"
-            className="rounded-full shadow-lg shadow-purple-800 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={25} />
           </a>{" "}
           <a
             href="#about"
-            className="rounded-full shadow-lg shadow-purple-800 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <FaInfoCircle size={25} />
           </a>{" "}
           <a
             href="#projects"
-            className="rounded-full shadow-lg shadow-purple-800 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={25} />
           </a>{" "}
           <a
             href="#contact"
-            className="rounded-full shadow-lg shadow-purple-800 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineMail size={25} />
           </a>

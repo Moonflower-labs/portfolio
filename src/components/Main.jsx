@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { AiFillGithub, AiOutlineHtml5 } from "react-icons/ai";
 import { FaPython, FaCss3, FaLinkedin } from "react-icons/fa";
 import bgImage from "../assets/dbackground.jpeg";
+
 const Main = () => {
   return (
     <div id="main">
@@ -16,12 +17,25 @@ const Main = () => {
           <h1 className="sm:text-5xl text-4xl font-bold text-violet-400">
             Moonflower Labs
           </h1>
-          <h2 className="flex sm:text-3xl text-2xl pt-4 text-yellow-200">
+          <h2 className="flex flex-col sm:text-3xl text-2xl pt-4 text-yellow-200">
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 "Web Solutions for small companies",
                 1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{
+                fontSize: "1em",
+                paddingLeft: "5px",
+              }}
+              repeat={1}
+            />
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+
                 "Front End",
                 1000,
                 "Back End",
@@ -32,7 +46,7 @@ const Main = () => {
                 1000,
               ]}
               wrapper="span"
-              speed={50}
+              speed={40}
               style={{
                 fontSize: "1em",
                 paddingLeft: "5px",
