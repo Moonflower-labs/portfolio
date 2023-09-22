@@ -18,24 +18,11 @@ const Main = () => {
             Moonflower Labs
           </h1>
           <h2 className="flex flex-col sm:text-3xl text-2xl pt-4 text-yellow-200">
+            <p className="hover:animate-pulse">
+              Web Solutions for small companies
+            </p>
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Web Solutions for small companies",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{
-                fontSize: "1em",
-                paddingLeft: "5px",
-              }}
-              repeat={1}
-            />
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-
                 "Front End",
                 1000,
                 "Back End",
