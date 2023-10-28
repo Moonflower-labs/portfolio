@@ -21,10 +21,7 @@ const Projects = () => {
         Projects
       </h1>
       <p className="text-center py-8">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti,
-        temporibus voluptatibus! Hic, quos neque magni illum explicabo eos quae
-        doloremque id mollitia aut inventore deserunt facilis nesciunt quidem
-        alias blanditiis.
+        These are some of the projects delivered.
       </p>
       <div className="grid sm:grid-cols-2 gap-12 ">
         <ProjectItem
