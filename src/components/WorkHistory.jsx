@@ -34,25 +34,24 @@ const data = [
 
 const WorkHistory = () => {
   return (
-    <main
-      id="workHistory"
-      className="max-w-[1040px] m-auto md:pl-20 p-4 py-16  bg-zinc-800"
-    >
-      <h2 className="text-4xl font-bold text-center  text-pink-700 mb-4">
-        Work History
-      </h2>
-      {data.map((item, index) => {
-        return (
-          <WorkItem
-            key={index}
-            year={item.year}
-            title={item.title}
-            duration={item.duration}
-            description={item.description}
-          />
-        );
-      })}
-    </main>
+    <section id="workHistory" className="m bg-zinc-800">
+      <div className="max-w-[1040px] m-auto md:pl-20 p-4 py-16  bg-zinc-800">
+        <h2 className="text-4xl font-bold text-center  text-pink-700 mb-4">
+          Work History
+        </h2>
+        {data.map((item, index) => {
+          return (
+            <WorkItem
+              key={index}
+              year={item.year}
+              title={item.title}
+              duration={item.duration}
+              description={item.description}
+            />
+          );
+        })}
+      </div>
+    </section>
   );
 };
 
