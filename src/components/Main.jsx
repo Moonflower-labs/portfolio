@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { AiFillGithub, AiOutlineHtml5 } from "react-icons/ai";
-import { FaPython, FaCss3, FaLinkedin } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { FaPython, FaLinkedin, FaReact } from "react-icons/fa";
 import bgImage from "../assets/dbackground.jpeg";
 
 const Main = () => {
@@ -44,7 +42,7 @@ const Main = () => {
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
             <a
               className="cursor-pointer hover:scale-110 ease-in duration-200"
-              href="https://www.linkedin.com/feed/"
+              href="https://www.linkedin.com/in/alex-santiago-234537286"
               target="_blank"
               rel="noreferrer"
             >
@@ -53,14 +51,14 @@ const Main = () => {
 
             <a
               className="cursor-pointer hover:scale-110 ease-in duration-200"
-              href="https://github.com/"
+              href="https://github.com/Moonflower-labs"
               target="_blank"
               rel="noreferrer"
             >
               <AiFillGithub size={24} />
             </a>
             <FaPython size={24} />
-            <FaCss3 size={24} />
+            <FaReact size={24} />
           </div>
         </div>
       </div>

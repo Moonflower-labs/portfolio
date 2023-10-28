@@ -19,7 +19,7 @@ const About = () => {
         delivering projects on time and within budget to achieve client
         satisfaction. If you are looking for a skilled and dedicated developer
         to bring your ideas to life,
-        <span>Alex</span> is here to help.
+        <span> Alex</span> is here to help.
       </h3>
     </section>
   );
