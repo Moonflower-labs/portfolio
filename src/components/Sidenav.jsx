@@ -22,7 +22,7 @@ const Sidenav = () => {
         onClick={handleNav}
         className="fixed top-4 right-4 z-[99] rounded-sm border-2 border-orange-300 text-orange-300  p-1  md:hidden"
       />
-      {nav ? (
+      {nav && (
         <div
           onClick={handleNav}
           className="fixed top-0 left-0 w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20"
@@ -68,11 +68,9 @@ const Sidenav = () => {
             <span className="pl-4">Contact</span>
           </a>
         </div>
-      ) : (
-        ""
       )}
 
-      <div className="md:block hidden  items-center fixed top-[25%]  z-10 h-screen">
+      <div className="md:block hidden items-center fixed top-[2.5%] lg:top-[25%] z-10 h-screen">
         <div className="flex flex-col">
           <a
             href="#main"
