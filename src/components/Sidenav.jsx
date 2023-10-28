@@ -6,6 +6,7 @@ import {
   AiOutlineMail,
   AiOutlineProject,
 } from "react-icons/ai";
+import { MdWorkHistory } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
 
 const Sidenav = () => {
@@ -44,6 +45,14 @@ const Sidenav = () => {
           </a>
           <a
             onClick={handleNav}
+            href="#workHistory"
+            className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <MdWorkHistory size={20} />
+            <span className="pl-4">Work History</span>
+          </a>
+          <a
+            onClick={handleNav}
             href="#projects"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
@@ -70,19 +79,25 @@ const Sidenav = () => {
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={25} />
-          </a>{" "}
+          </a>
           <a
             href="#about"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <FaInfoCircle size={25} />
-          </a>{" "}
+          </a>
+          <a
+            href="#workHistory"
+            className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <MdWorkHistory size={25} />
+          </a>
           <a
             href="#projects"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={25} />
-          </a>{" "}
+          </a>
           <a
             href="#contact"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"

@@ -13,7 +13,10 @@ import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div id="projects" className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 ">
+    <section
+      id="projects"
+      className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 bg-slate-300"
+    >
       <h1 className="text-4xl font-bold text-center  text-pink-700">
         Projects
       </h1>
@@ -55,7 +58,7 @@ const Projects = () => {
         <ProjectItem
           img={florImg}
           title="Membership Site with Stripe API"
-          link="https://la-flor-blanca.onrender.com"
+          link="https://laflorblanca.com"
           icons={
             <>
               <AiFillHtml5 />
@@ -95,7 +98,7 @@ const Projects = () => {
           }
         />
       </div>
-    </div>
+    </section>
   );
 };
 export default Projects;
