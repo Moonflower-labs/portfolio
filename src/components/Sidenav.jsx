@@ -72,7 +72,7 @@ const Sidenav = () => {
         ""
       )}
 
-      <div className="md:block hidden  items-center fixed top-[25%] z-10">
+      <div className="md:block hidden  items-center fixed md:top-[25%] sm:top-[10%] z-10 h-screen">
         <div className="flex flex-col">
           <a
             href="#main"
