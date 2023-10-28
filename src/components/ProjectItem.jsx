@@ -1,10 +1,15 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React from "react";
+import { useState } from "react";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const ProjectItem = ({ img, title, link, icons }) => {
+const ProjectItem = ({ img, title, link, icons, info }) => {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleClik = () => {
+    setShowInfo(!showInfo);
+  };
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-500 rounded-xl group hover:bg-gradient-to-r from-gray-500 to-[#aa2055] ease-in duration-200">
+    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-500 rounded-xl group hover:bg-gradient-to-r from-gray-500 to-[#aa2055] ease-in duration-200 overflow-hidden">
       <img
         src={img}
         alt={title}
@@ -23,6 +28,27 @@ const ProjectItem = ({ img, title, link, icons }) => {
           </p>
         </a>
       </div>
+      <p
+        className="text-sm text-amber-400 hidden group-hover:block  font-bol absolute bottom-2 end-4 cursor-pointer"
+        onClick={handleClik}
+      >
+        more info
+      </p>
+      {showInfo && (
+        <>
+          <div className="w-full h-full absolute bg-zinc-800  text-yellow-50 flex justify-center items-center ">
+            <p className="p-4 text-center">
+              {info ? info : "No info available"}
+            </p>
+            <span
+              className="cursor-pointer  text-white absolute top-1 end-1"
+              onClick={handleClik}
+            >
+              <AiOutlineCloseCircle size={22} />
+            </span>
+          </div>
+        </>
+      )}
     </div>
   );
 };

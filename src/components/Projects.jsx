@@ -34,6 +34,7 @@ const Projects = () => {
                 <RiJavascriptLine />
               </>
             }
+            info="Front end business site, HTML, CSS, Javascript and Bootstrap 5."
           />
 
           <ProjectItem
@@ -48,6 +49,7 @@ const Projects = () => {
                 <RiJavascriptLine />
               </>
             }
+            info="Weather application using the Open Weather API."
           />
 
           <ProjectItem
@@ -63,6 +65,8 @@ const Projects = () => {
                 <FaPython />
               </>
             }
+            info="Python (Flask) webb app.
+            Postgresql Database and Stripe API."
           />
 
           <ProjectItem
@@ -77,6 +81,7 @@ const Projects = () => {
                 <RiJavascriptLine />
               </>
             }
+            info="Fun project built with Vanilla Javascript."
           />
 
           <ProjectItem
@@ -91,6 +96,7 @@ const Projects = () => {
                 <RiJavascriptLine />
               </>
             }
+            info="Notess app using Local Storage, built in Vanilla JS and Bootstrap 5."
           />
         </div>
       </div>
