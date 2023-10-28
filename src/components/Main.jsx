@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import { AiFillGithub } from "react-icons/ai";
-import { FaPython, FaLinkedin, FaReact } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import bgImage from "../assets/dbackground.jpeg";
 
 const Main = () => {
@@ -39,7 +39,7 @@ const Main = () => {
               repeat={Infinity}
             />
           </h2>
-          <div className="flex justify-between pt-6 max-w-[200px] w-full">
+          <div className="flex gap-4 justify-center pt-6 max-w-[200px] w-full">
             <a
               className="cursor-pointer hover:scale-110 ease-in duration-200"
               href="https://www.linkedin.com/in/alex-santiago-234537286"
@@ -57,8 +57,6 @@ const Main = () => {
             >
               <AiFillGithub size={24} />
             </a>
-            <FaPython size={24} />
-            <FaReact size={24} />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { FaPython, FaReact, FaHtml5, FaNode } from "react-icons/fa";
-import { DiCss3 } from "react-icons/di";
-import { BiLogoTypescript } from "react-icons/bi";
+import { DiCss3, DiMysql } from "react-icons/di";
+import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
 
@@ -17,6 +17,8 @@ const Footer = () => {
         <FaReact size={26} />
         <FaPython size={26} />
         <SiTailwindcss size={26} />
+        <DiMysql size={26} />
+        <BiLogoPostgresql size={26} />
       </div>
       <div className="bg-gradient-to-r from-gray-500 to-[#aa2055]  hover:scale-[1.025] ease-in duration-200 p-1 mb-3 rounded-md text-sm">
         &copy; Moonflower Labs {year}
