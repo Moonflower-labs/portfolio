@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 const Footer = () => {
   return (
     <footer className="flex flex-row flex-wrap w-full overflow-x-hidden  bg-zinc-800 text-orange-200 items-center justify-around">
-      <div className="px-4 py-4 flex flex-row flex-grow gap-4">
+      <div className="px-4 py-4 flex flex-row flex-grow gap-4 mb-3">
         <FaHtml5 size={26} />
         <DiCss3 size={26} />
         <RiJavascriptFill size={26} />
