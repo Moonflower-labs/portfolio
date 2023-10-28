@@ -18,7 +18,7 @@ const Footer = () => {
         <FaPython size={26} />
         <SiTailwindcss size={26} />
       </div>
-      <div className="bg-gradient-to-r from-gray-500 to-[#aa2055]  hover:scale-[1.025] ease-in duration-200 p-1 mb-2 rounded-md text-sm">
+      <div className="bg-gradient-to-r from-gray-500 to-[#aa2055]  hover:scale-[1.025] ease-in duration-200 p-1 mb-3 rounded-md text-sm">
         &copy; Moonflower Labs {year}
       </div>
     </footer>
