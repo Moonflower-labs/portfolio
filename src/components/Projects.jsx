@@ -4,10 +4,12 @@ import weatherImg from "../assets/weatherApp.jpeg";
 import florImg from "../assets/florBlanca.jpeg";
 import gameImg from "../assets/game.jpeg";
 import notesImg from "../assets/notesApp.jpeg";
+import todoImg from "../assets/todo.jpeg";
 
 import { AiFillHtml5 } from "react-icons/ai";
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
 
 const projectData = [
   {
@@ -69,6 +71,19 @@ const projectData = [
   },
   {
     id: 5,
+    img: todoImg,
+    title: "Todo App",
+    link: "https://todo-app-a5f0c.web.app",
+    icons: [
+      <AiFillHtml5 key={1} />,
+      <FaCss3 key={2} />,
+      <BiLogoTypescript key={3} />,
+    ],
+    action: "Try Out",
+    info: "Todo app built with Typescript.",
+  },
+  {
+    id: 6,
     img: notesImg,
     title: "Notes App",
     link: "https://moonflower-labs.github.io/Moonflowerlabs/notesApp/index.html",
