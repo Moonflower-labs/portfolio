@@ -18,47 +18,65 @@ const Contact = () => {
       >
         <div className="grid md:grid-cols-2 gap-4 w-full ">
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2">Name</label>
+            <label className="uppercase text-sm py-2" htmlFor="name">
+              Name
+            </label>
             <input
               className="bg-gray-100 flex border-2 border-gray-300 rounded p-3 text-gray-700 focus:outline-none focus:bg-white focus:border-pink-600"
               name="name"
               type="text"
+              id="name"
+              autoComplete="false"
               required
             />
           </div>
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2">Phone</label>
+            <label className="uppercase text-sm py-2" htmlFor="phone">
+              Phone
+            </label>
             <input
               className="bg-gray-100  p-3 flex border-2 border-gray-300 rounded  text-gray-700 focus:outline-none focus:bg-white focus:border-pink-600"
               name="phone"
               type="text"
+              id="phone"
+              autoComplete="false"
             />
           </div>
         </div>
         <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Email</label>
+          <label className="uppercase text-sm py-2" htmlFor="email">
+            Email
+          </label>
           <input
             className="bg-gray-100 border-2  p-3 flex  border-gray-300 rounded focus:outline-none  focus:bg-white focus:border-pink-600"
             name="email"
             type="email"
+            id="email"
+            autoComplete="false"
             required
           />
         </div>
         <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Subject</label>
+          <label className="uppercase text-sm py-2" htmlFor="subject">
+            Subject
+          </label>
           <input
             className="bg-gray-100 border-2 rounded p-3 flex  border-gray-300 focus:outline-none  focus:bg-white focus:border-pink-600"
             type="text"
             name="subject"
+            id="subject"
             required
           />
         </div>
         <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Message</label>
+          <label className="uppercase text-sm py-2" htmlFor="message">
+            Message
+          </label>
           <textarea
             className="bg-gray-100 border-2 rounded-md p-3  border-gray-300 focus:outline-none  focus:bg-white focus:border-pink-600"
             name="message"
             rows="10"
+            id="message"
             required
           ></textarea>
         </div>
