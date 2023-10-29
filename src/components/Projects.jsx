@@ -41,7 +41,7 @@ const projectData = [
   {
     id: 3,
     img: florImg,
-    title: "Membership Site with Stripe API",
+    title: "Subscriptions/E-commerce Site",
     link: "https://laflorblanca.com",
     icons: [
       <AiFillHtml5 key={1} />,
