@@ -5,7 +5,7 @@ import bgImage from "../assets/dbackground.jpeg";
 
 const Main = () => {
   return (
-    <div id="main">
+    <section id="main">
       <img
         className="w-full h-screen object-cover object-right"
         src={bgImage}
@@ -60,7 +60,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Main;

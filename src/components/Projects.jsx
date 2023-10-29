@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import ProjectItem from "./ProjectItem";
 import beautyImg from "../assets/beauty.jpeg";
 import weatherImg from "../assets/weatherApp.jpeg";

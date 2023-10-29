@@ -39,17 +39,15 @@ const WorkHistory = () => {
         <h2 className="text-4xl font-bold text-center  text-pink-700 mb-4">
           Work History
         </h2>
-        {data.map((item, index) => {
-          return (
-            <WorkItem
-              key={index}
-              year={item.year}
-              title={item.title}
-              duration={item.duration}
-              description={item.description}
-            />
-          );
-        })}
+        {data.map((item, index) => (
+          <WorkItem
+            key={index}
+            year={item.year}
+            title={item.title}
+            duration={item.duration}
+            description={item.description}
+          />
+        ))}
       </div>
     </section>
   );
