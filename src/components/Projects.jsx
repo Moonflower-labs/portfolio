@@ -9,6 +9,80 @@ import { AiFillHtml5 } from "react-icons/ai";
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
 
+const projectData = [
+  {
+    id: 1,
+    img: beautyImg,
+    title: "Natural Theraphy",
+    link: "https://moonflower-labs.github.io/Moonflowerlabs/Paula/index.html",
+    icons: [
+      <AiFillHtml5 key={1} />,
+      <FaCss3 key={2} />,
+      <FaBootstrap key={3} />,
+      <RiJavascriptLine key={4} />,
+    ],
+    action: "Visit Site",
+    info: "Front end business site, HTML, CSS, Javascript and Bootstrap 5.",
+  },
+  {
+    id: 2,
+    img: weatherImg,
+    title: "Weather App",
+    link: "https://moonflower-labs.github.io/Moonflowerlabs/weatherApp/index.html",
+    icons: [
+      <AiFillHtml5 key={1} />,
+      <FaCss3 key={2} />,
+      <FaBootstrap key={3} />,
+      <RiJavascriptLine key={4} />,
+    ],
+    action: "Check Weather",
+    info: "Weather application using the Open Weather API.",
+  },
+  {
+    id: 3,
+    img: florImg,
+    title: "Membership Site with Stripe API",
+    link: "https://laflorblanca.com",
+    icons: [
+      <AiFillHtml5 key={1} />,
+      <FaCss3 key={2} />,
+      <FaBootstrap key={3} />,
+      <RiJavascriptLine key={4} />,
+      <FaPython key={5} />,
+    ],
+    action: "Visit Site",
+    info: "Python (Flask) webb app. Postgresql Database and Stripe API.",
+  },
+  {
+    id: 4,
+    img: gameImg,
+    title: "Flip Card Game",
+    link: "https://moonflower-labs.github.io/Moonflowerlabs/flipcardGame/index.html",
+    icons: [
+      <AiFillHtml5 key={1} />,
+      <FaCss3 key={2} />,
+      <FaBootstrap key={3} />,
+      <RiJavascriptLine key={4} />,
+    ],
+    action: "Play Game",
+    info: "Fun project built with Vanilla Javascript.",
+  },
+  {
+    id: 5,
+    img: notesImg,
+    title: "Notes App",
+    link: "https://moonflower-labs.github.io/Moonflowerlabs/notesApp/index.html",
+    icons: [
+      <AiFillHtml5 key={1} />,
+      <FaCss3 key={2} />,
+      <FaBootstrap key={3} />,
+      <RiJavascriptLine key={4} />,
+    ],
+    action: "Try Out",
+    info: "Notess app using Local Storage, built in Vanilla JS and Bootstrap 5.",
+  },
+];
+
 const Projects = () => {
   return (
     <section id="projects" className=" bg-slate-300">
@@ -19,84 +93,25 @@ const Projects = () => {
         <p className="text-center py-8">
           These are some of the projects delivered.
         </p>
-        <div className="grid sm:grid-cols-2 gap-12 ">
-          <ProjectItem
-            img={beautyImg}
-            title="Natural Theraphy"
-            link="https://moonflower-labs.github.io/Moonflowerlabs/Paula/index.html"
-            icons={
-              <>
-                <AiFillHtml5 />
-                <FaCss3 />
-                <FaBootstrap />
-                <RiJavascriptLine />
-              </>
-            }
-            info="Front end business site, HTML, CSS, Javascript and Bootstrap 5."
-          />
-
-          <ProjectItem
-            img={weatherImg}
-            title="Weather App"
-            link="https://moonflower-labs.github.io/Moonflowerlabs/weatherApp/index.html"
-            icons={
-              <>
-                <AiFillHtml5 />
-                <FaCss3 />
-                <FaBootstrap />
-                <RiJavascriptLine />
-              </>
-            }
-            info="Weather application using the Open Weather API."
-          />
-
-          <ProjectItem
-            img={florImg}
-            title="Membership Site with Stripe API"
-            link="https://laflorblanca.com"
-            icons={
-              <>
-                <AiFillHtml5 />
-                <FaCss3 />
-                <FaBootstrap />
-                <RiJavascriptLine />
-                <FaPython />
-              </>
-            }
-            info="Python (Flask) webb app.
-            Postgresql Database and Stripe API."
-          />
-
-          <ProjectItem
-            img={gameImg}
-            title="Flip Card Game"
-            link="https://moonflower-labs.github.io/Moonflowerlabs/flipcardGame/index.html"
-            icons={
-              <>
-                <AiFillHtml5 />
-                <FaCss3 />
-                <FaBootstrap />
-                <RiJavascriptLine />
-              </>
-            }
-            info="Fun project built with Vanilla Javascript."
-          />
-
-          <ProjectItem
-            img={notesImg}
-            title="Notes App"
-            link="https://moonflower-labs.github.io/Moonflowerlabs/notesApp/index.html"
-            icons={
-              <>
-                <AiFillHtml5 />
-                <FaCss3 />
-                <FaBootstrap />
-                <RiJavascriptLine />
-              </>
-            }
-            info="Notess app using Local Storage, built in Vanilla JS and Bootstrap 5."
-          />
-        </div>
+        {projectData ? (
+          <div className="grid sm:grid-cols-2 gap-12 ">
+            {projectData.map((project) => (
+              <ProjectItem
+                key={project.id}
+                img={project.img}
+                title={project.title}
+                link={project.link}
+                icons={project.icons}
+                info={project.info}
+                action={project.action}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center mx-auto">
+            No projects avaliable to display
+          </p>
+        )}
       </div>
     </section>
   );

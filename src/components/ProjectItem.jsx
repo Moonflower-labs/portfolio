@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const ProjectItem = ({ img, title, link, icons, info }) => {
+const ProjectItem = ({ img, title, link, icons, action, info }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleClik = () => {
@@ -19,12 +19,12 @@ const ProjectItem = ({ img, title, link, icons, info }) => {
         <h3 className="text-2xl font-bold text-yellow-100 tracking-wider text-center">
           {title}
         </h3>
-        <div className="flex text-gray-300 w-full max-w-full justify-around pt-4">
+        <div className="flex text-gray-300 w-full max-w-full justify-around pt-4 lg:mb-10">
           {icons}
         </div>
         <a href={link} target="_blank" rel="noreferrer">
           <p className="text-center p-2 my-3 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
-            Visit
+            {action}
           </p>
         </a>
       </div>
