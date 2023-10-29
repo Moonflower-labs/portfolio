@@ -4,7 +4,7 @@ import weatherImg from "../assets/weatherApp.jpeg";
 import florImg from "../assets/florBlanca.jpeg";
 import gameImg from "../assets/game.jpeg";
 import notesImg from "../assets/notesApp.jpeg";
-import todoImg from "../assets/todo.jpeg";
+import todoImg from "../assets/todoApp.jpeg";
 
 import { AiFillHtml5 } from "react-icons/ai";
 import { RiJavascriptLine } from "react-icons/ri";
