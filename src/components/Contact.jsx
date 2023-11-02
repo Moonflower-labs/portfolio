@@ -25,6 +25,7 @@ const Contact = () => {
           headers: {
             Accept: "application/json",
           },
+          redirect: "manual",
         }
       );
       if (!response.ok) {
