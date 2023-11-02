@@ -1,4 +1,41 @@
+import { useState, useEffect } from "react";
+
 const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (submitted) {
+      timer = setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    }
+    return () => clearTimeout(timer);
+  }, [submitted]);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    try {
+      const response = await fetch(
+        "https://getform.io/f/f5fc6514-76cf-48de-b6dc-fcf613335978",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      event.target.reset();
+      setSubmitted(true);
+    } catch (err) {
+      console.log(err);
+    }
+
+    event.target.reset();
+  };
+
   return (
     <div id="contact" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
       <h1 className=" py-4 text-3xl text-center font-bold   text-pink-700 mb-6">
@@ -7,12 +44,7 @@ const Contact = () => {
       <p className="text-center pb-3 mb-6">
         Use the form below to contact us directly.
       </p>
-      <form
-        action="https://getform.io/f/f5fc6514-76cf-48de-b6dc-fcf613335978"
-        method="POST"
-        encType="multipart/form-data"
-        className="w-full max-w-xl  mx-auto"
-      >
+      <form className="w-full max-w-xl mx-auto" onSubmit={handleSubmit}>
         <div className="grid md:grid-cols-2 gap-4 w-full ">
           <div className="flex flex-col">
             <label className="uppercase text-sm py-2" htmlFor="name">
@@ -86,6 +118,13 @@ const Contact = () => {
           </button>
         </div>
       </form>
+      {submitted && (
+        <div className="fixed inset-0 flex items-center justify-center">
+          <div className="bg-zinc-800 text-orange-200 rounded-lg p-6 shadow-lg">
+            <p className="text-xl">Form submitted successfully!</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
