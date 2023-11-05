@@ -7,7 +7,7 @@ import { SiTailwindcss } from "react-icons/si";
 const year = new Date().getFullYear();
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row flex-wrap w-full overflow-x-hidden bg-zinc-800 text-orange-200 items-center justify-around">
+    <footer className="flex flex-col md:flex-row flex-wrap w-full overflow-x-hidden bg-zinc-800 text-orange-200 items-center justify-around border-t-[1px] border-t-orange-200">
       <div className="px-4 py-4 flex flex-row flex-grow gap-4 my-2">
         <FaHtml5 size={26} />
         <DiCss3 size={26} />
@@ -20,7 +20,7 @@ const Footer = () => {
         <DiMysql size={26} />
         <BiLogoPostgresql size={26} />
       </div>
-      <div className="bg-gradient-to-r from-gray-500 to-[#aa2055]  hover:scale-[1.025] ease-in duration-200 p-1 my-2 rounded-md text-sm md:me-3">
+      <div className="bg-gradient-to-r from-gray-500 to-[#aa7120] p-1 my-2 rounded-md text-sm md:me-3">
         &copy; Moonflower Labs {year}
       </div>
     </footer>

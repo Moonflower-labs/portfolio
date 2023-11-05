@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   AiOutlineMenu,
   AiOutlineHome,
@@ -26,81 +27,81 @@ const Sidenav = () => {
           onClick={handleNav}
           className="fixed top-0 left-0 w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20"
         >
-          <a
+          <Link
             onClick={handleNav}
-            href="#main"
+            to="/"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={20} />
             <span className="pl-4">Home</span>
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={handleNav}
-            href="#about"
+            to="/about"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <FaInfoCircle size={20} />
             <span className="pl-4">About</span>
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={handleNav}
-            href="#workHistory"
+            to="/work"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <MdWorkHistory size={20} />
             <span className="pl-4">Work History</span>
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={handleNav}
-            href="#projects"
+            to="/projects"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={20} />
             <span className="pl-4">Projects</span>
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={handleNav}
-            href="#contact"
+            to="/contact"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineMail size={20} />
             <span className="pl-4">Contact</span>
-          </a>
+          </Link>
         </div>
       )}
 
       <div className="md:block hidden items-center fixed top-[4%] lg:top-[25%] z-10 h-screen">
         <div className="flex flex-col">
-          <a
-            href="#main"
+          <Link
+            to="/"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={25} />
-          </a>
-          <a
-            href="#about"
+          </Link>
+          <Link
+            to="/about"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <FaInfoCircle size={25} />
-          </a>
-          <a
-            href="#workHistory"
+          </Link>
+          <Link
+            to="/work"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <MdWorkHistory size={25} />
-          </a>
-          <a
-            href="#projects"
+          </Link>
+          <Link
+            to="/projects"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={25} />
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineMail size={25} />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

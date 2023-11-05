@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import Sidenav from "./components/Sidenav";
 import Main from "./components/Main";
 import Projects from "./components/Projects";
@@ -7,15 +8,17 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 function App() {
   return (
-    <div>
+    <>
       <Sidenav />
-      <Main />
-      <About />
-      <WorkHistory />
-      <Projects />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work" element={<WorkHistory />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
