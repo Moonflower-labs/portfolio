@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <section id="about">
-      <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 lg:flex flex-row justify-end items-center gap-2 lg:gap-12">
-        <h2 className="text-4xl font-bold text-center text-pink-700 mb-4">
+      <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 lg:flex flex-row justify-between items-start gap-2 lg:gap-12">
+        <h2 className="text-4xl lg:text-6xl font-bold text-center text-pink-700 mb-4 py-8">
           About
         </h2>
         <div className="flex flex-col gap-4">
