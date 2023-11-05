@@ -14,6 +14,9 @@ const Sidenav = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div>
@@ -28,7 +31,7 @@ const Sidenav = () => {
           className="fixed top-0 left-0 w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20"
         >
           <Link
-            onClick={handleNav}
+            onClick={scrollToTop}
             to="/"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
@@ -36,7 +39,7 @@ const Sidenav = () => {
             <span className="pl-4">Home</span>
           </Link>
           <Link
-            onClick={handleNav}
+            onClick={scrollToTop}
             to="/about"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
@@ -44,7 +47,7 @@ const Sidenav = () => {
             <span className="pl-4">About</span>
           </Link>
           <Link
-            onClick={handleNav}
+            onClick={scrollToTop}
             to="/work"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
@@ -52,7 +55,7 @@ const Sidenav = () => {
             <span className="pl-4">Work History</span>
           </Link>
           <Link
-            onClick={handleNav}
+            onClick={scrollToTop}
             to="/projects"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
@@ -60,7 +63,7 @@ const Sidenav = () => {
             <span className="pl-4">Projects</span>
           </Link>
           <Link
-            onClick={handleNav}
+            onClick={scrollToTop}
             to="/contact"
             className="w-[75%] flex  justify-center items-center rounded-full shadow-lg shadow-gray-400 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
