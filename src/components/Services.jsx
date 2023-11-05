@@ -1,14 +1,14 @@
 const Services = () => {
   return (
-    <section className="h-max flex  bg-zinc-600">
-      <div className="max-w-[1096px]  m-auto md:pl-20 p-4 py-16 lg:flex flex-row items-center gap-2 lg:gap-12">
-        <h2 className="text-4xl font-bold text-center  text-pink-700 mb-4">
+    <section className="h-max bg-zinc-600">
+      <div className="max-w-[1124px] m-auto md:pl-20 p-4 py-16 lg:flex flex-row justify-between items-center gap-2 lg:gap-12">
+        <h2 className="text-4xl font-bold text-center text-pink-700 mb-4">
           Services
         </h2>
-        <ul className="text-xl text-justify text-orange-100/95">
+        <ul className="text-xl text-justify text-orange-100/95 px-6 md:px-4">
           <li className="mb-10 ml-4">
-            <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
-              1. Web Design:
+            <span className="inline-block font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
+              1. Web Design
             </span>
             <p>
               Stunning user-friendly websites that not only capture your
@@ -19,7 +19,7 @@ const Services = () => {
             </p>
           </li>
           <li className="mb-10 ml-4">
-            <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
+            <span className="inline-block font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
               2. Databases
             </span>
             <p>
@@ -31,7 +31,7 @@ const Services = () => {
             </p>
           </li>
           <li className="mb-10 ml-4">
-            <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
+            <span className="inline-block font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
               3. UI (User Interface) Design
             </span>
             <p>
@@ -42,7 +42,7 @@ const Services = () => {
             </p>
           </li>
           <li className="mb-10 ml-4">
-            <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
+            <span className="inline-block font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
               4. Consulting
             </span>
             <p>
@@ -55,7 +55,7 @@ const Services = () => {
             </p>
           </li>
           <li className="mb-10 ml-4">
-            <span className="inline-block px-2 py-1 font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
+            <span className="inline-block font-semibold bg-gradient-to-r from-gray-500 to-[#aa7120] rounded-md text-orange-200 mb-4">
               5. Web Development
             </span>
             <p>

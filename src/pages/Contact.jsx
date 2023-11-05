@@ -117,7 +117,7 @@ const Contact = () => {
         <div className="flex flex-col">
           <input type="hidden" name="_gotcha" style={{ display: "none" }} />
           <button
-            className="shadow mt-4 bg-gradient-to-r from-gray-500 to-[#aa2055]  hover:scale-[1.025] ease-in duration-200 hover:text-yellow-400 focus:shadow-outline focus:outline-none text-yellow-100 font-bold py-2 px-4 rounded-lg "
+            className="shadow mt-4 bg-gradient-to-r from-gray-500 to-[#aa2055]  hover:scale-[1.025] ease-in duration-200 hover:text-yellow-400 focus:shadow-outline focus:outline-none text-yellow-100 font-bold py-2 px-4 rounded-lg"
             type="submit"
           >
             Send Message
