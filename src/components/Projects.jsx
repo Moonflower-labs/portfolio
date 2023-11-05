@@ -5,15 +5,32 @@ import florImg from "../assets/florBlanca.jpeg";
 import gameImg from "../assets/game.jpeg";
 import notesImg from "../assets/notesApp.jpeg";
 import todoImg from "../assets/todoApp.jpeg";
+import nextDashboard from "../assets/nextjs-dashboard.jpeg";
 
+import { TbBrandNextjs } from "react-icons/tb";
 import { AiFillHtml5 } from "react-icons/ai";
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
-import { BiLogoTypescript } from "react-icons/bi";
+import { BiLogoTypescript, BiLogoReact } from "react-icons/bi";
+import { SiTailwindcss } from "react-icons/si";
 
 const projectData = [
   {
     id: 1,
+    img: nextDashboard,
+    title: "NextJS Dashboard",
+    link: "https://nextjs-dashboard-lilac-ten.vercel.app/dashboard",
+    icons: [
+      <BiLogoReact key={1} />,
+      <SiTailwindcss key={2} />,
+      <TbBrandNextjs key={3} />,
+      <BiLogoTypescript key={4} />,
+    ],
+    action: "Visit Site",
+    info: "Dasboard website deployed in Vercel with Postgres database",
+  },
+  {
+    id: 2,
     img: beautyImg,
     title: "Natural Theraphy",
     link: "https://moonflower-labs.github.io/Moonflowerlabs/Paula/index.html",
@@ -27,7 +44,7 @@ const projectData = [
     info: "Front end business site, HTML, CSS, Javascript and Bootstrap 5.",
   },
   {
-    id: 2,
+    id: 3,
     img: weatherImg,
     title: "Weather App",
     link: "https://moonflower-labs.github.io/Moonflowerlabs/weatherApp/index.html",
@@ -41,7 +58,7 @@ const projectData = [
     info: "Weather application using the Open Weather API.",
   },
   {
-    id: 3,
+    id: 4,
     img: florImg,
     title: "Subscriptions/E-commerce Site",
     link: "https://laflorblanca.com",
@@ -56,7 +73,7 @@ const projectData = [
     info: "Python (Flask) webb app. Postgresql Database and Stripe API.",
   },
   {
-    id: 4,
+    id: 5,
     img: gameImg,
     title: "Flip Card Game",
     link: "https://moonflower-labs.github.io/Moonflowerlabs/flipcardGame/index.html",
@@ -70,7 +87,7 @@ const projectData = [
     info: "Fun project built with Vanilla Javascript.",
   },
   {
-    id: 5,
+    id: 6,
     img: todoImg,
     title: "Todo App",
     link: "https://todo-app-a5f0c.web.app",
@@ -83,7 +100,7 @@ const projectData = [
     info: "Todo app built with Typescript.",
   },
   {
-    id: 6,
+    id: 7,
     img: notesImg,
     title: "Notes App",
     link: "https://moonflower-labs.github.io/Moonflowerlabs/notesApp/index.html",
