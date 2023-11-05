@@ -14,7 +14,7 @@ import { RiJavascriptLine } from "react-icons/ri";
 import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoReact } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 const projectData = [
   {
@@ -128,6 +128,10 @@ const Projects = () => {
   const handleNextPage = useCallback(() => {
     setCurrentPage((prevPage) => prevPage + 1);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when changing pages
+  }, [currentPage]);
 
   return (
     <section id="projects" className="min-h-screen bg-slate-300">
