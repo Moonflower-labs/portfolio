@@ -7,12 +7,14 @@ import notesImg from "../assets/notesApp.jpeg";
 import todoImg from "../assets/todoApp.jpeg";
 import nextDashboard from "../assets/nextjs-dashboard.jpeg";
 
+import Pagination from "./Pagination";
 import { TbBrandNextjs } from "react-icons/tb";
 import { AiFillHtml5 } from "react-icons/ai";
 import { RiJavascriptLine } from "react-icons/ri";
 import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoReact } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
+import { useState, useCallback } from "react";
 
 const projectData = [
   {
@@ -116,6 +118,17 @@ const projectData = [
 ];
 
 const Projects = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+  const totalPages = Math.ceil(projectData.length / itemsPerPage);
+  const handlePreviousPage = useCallback(() => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  }, []);
+
+  const handleNextPage = useCallback(() => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  }, []);
+
   return (
     <section id="projects" className=" bg-slate-300">
       <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 bg-slate-300">
@@ -127,17 +140,22 @@ const Projects = () => {
         </p>
         {projectData ? (
           <div className="grid sm:grid-cols-2 gap-12 ">
-            {projectData.map((project) => (
-              <ProjectItem
-                key={project.id}
-                img={project.img}
-                title={project.title}
-                link={project.link}
-                icons={project.icons}
-                info={project.info}
-                action={project.action}
-              />
-            ))}
+            {projectData
+              .slice(
+                (currentPage - 1) * itemsPerPage,
+                currentPage * itemsPerPage
+              )
+              .map((project) => (
+                <ProjectItem
+                  key={project.id}
+                  img={project.img}
+                  title={project.title}
+                  link={project.link}
+                  icons={project.icons}
+                  info={project.info}
+                  action={project.action}
+                />
+              ))}
           </div>
         ) : (
           <p className="text-center mx-auto">
@@ -145,6 +163,15 @@ const Projects = () => {
           </p>
         )}
       </div>
+      {projectData && projectData.length > itemsPerPage && (
+        <Pagination
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          totalPages={totalPages}
+          handlePreviousPage={handlePreviousPage}
+          handleNextPage={handleNextPage}
+        />
+      )}
     </section>
   );
 };
