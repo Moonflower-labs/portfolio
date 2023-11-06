@@ -15,10 +15,13 @@ const Main = () => {
           <h1 className="sm:text-5xl text-4xl font-bold text-violet-400">
             Moonflower Labs
           </h1>
+
           <h2 className="flex flex-col sm:text-3xl text-2xl pt-4 text-yellow-200">
-            <p className="hover:animate-pulse">
-              Web Solutions for small companies
+            <p className="hover:animate-pulse flip-container">
+              Web <span className="text-violet-400">Solutions </span>
+              for small companies
             </p>
+
             <TypeAnimation
               sequence={[
                 "Front End",
@@ -46,7 +49,7 @@ const Main = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={28} />
             </a>
 
             <a
@@ -55,7 +58,7 @@ const Main = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <AiFillGithub size={24} />
+              <AiFillGithub size={28} />
             </a>
           </div>
         </div>
