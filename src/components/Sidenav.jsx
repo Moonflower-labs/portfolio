@@ -17,9 +17,9 @@ const Sidenav = () => {
   return (
     <div>
       <LuMenuSquare
-        size={42}
+        size={36}
         onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] rounded-sm  text-pink-800  p-1  md:hidden cursor-pointer"
+        className="fixed top-4 right-4 z-[99] text-pink-700 md:hidden cursor-pointer"
       />
       {nav && (
         <div
