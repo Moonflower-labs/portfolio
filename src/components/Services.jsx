@@ -31,11 +31,11 @@ const services = [
 const Services = () => {
   return (
     <section className="h-max bg-zinc-600">
-      <div className="max-w-[1154px] m-auto md:pl-20 p-4 py-16 lg:flex flex-row justify-between items-start gap-2 lg:gap-8">
-        <h2 className="text-4xl lg:text-6xl font-bold text-center text-pink-700 mb-4 py-8">
+      <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 lg:flex flex-row justify-between items-start gap-2 xl:gap-8">
+        <h2 className="text-4xl xl:text-6xl font-bold text-center text-pink-700 mb-4">
           Services
         </h2>
-        <ul className="text-xl text-justify  text-orange-100/95 px-6 md:px-4 lg:pr-20">
+        <ul className="text-xl text-justify  text-orange-100/95 px-6 md:px-4 ">
           {services &&
             services.map((service) => {
               return (
