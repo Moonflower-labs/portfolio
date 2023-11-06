@@ -76,30 +76,35 @@ const Sidenav = () => {
       <div className="md:block hidden items-center fixed top-[4%] lg:top-[25%] z-10 h-screen">
         <div className="flex flex-col">
           <Link
+            onClick={scrollToTop}
             to="/"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={25} />
           </Link>
           <Link
+            onClick={scrollToTop}
             to="/about"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <FaInfoCircle size={25} />
           </Link>
           <Link
+            onClick={scrollToTop}
             to="/work"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <MdWorkHistory size={25} />
           </Link>
           <Link
+            onClick={scrollToTop}
             to="/projects"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={25} />
           </Link>
           <Link
+            onClick={scrollToTop}
             to="/contact"
             className="rounded-full shadow-lg shadow-gray-600 bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
