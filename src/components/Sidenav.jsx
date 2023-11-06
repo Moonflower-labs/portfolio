@@ -19,8 +19,9 @@ const Sidenav = () => {
       <LuMenuSquare
         size={36}
         onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] text-pink-700 md:hidden cursor-pointer"
+        className="fixed top-4 right-4 z-[99] text-orange-300 md:hidden cursor-pointer"
       />
+
       {nav && (
         <div
           onClick={handleNav}
@@ -68,7 +69,6 @@ const Sidenav = () => {
           </Link>
         </div>
       )}
-
       <div className="md:block hidden items-center fixed top-[4%] lg:top-[25%] z-10 h-screen">
         <div className="flex flex-col">
           <Link
