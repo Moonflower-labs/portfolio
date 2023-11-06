@@ -38,6 +38,9 @@ const Main = () => {
               style={{
                 fontSize: "1em",
                 paddingLeft: "5px",
+                with: "3rem",
+                margin: "auto",
+                paddingTop: "1rem",
               }}
               repeat={Infinity}
             />

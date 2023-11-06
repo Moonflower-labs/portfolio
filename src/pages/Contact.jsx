@@ -25,7 +25,6 @@ const Contact = () => {
           headers: {
             Accept: "application/json",
           },
-          redirect: "manual",
         }
       );
       if (!response.ok) {
@@ -37,8 +36,6 @@ const Contact = () => {
     } catch (err) {
       console.log(err);
     }
-
-    event.target.reset();
   };
 
   return (
