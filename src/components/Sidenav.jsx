@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  AiOutlineMenu,
-  AiOutlineHome,
-  AiOutlineMail,
-  AiOutlineProject,
-} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineMail, AiOutlineProject } from "react-icons/ai";
 import { MdWorkHistory } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
+import { LuMenuSquare } from "react-icons/lu";
 
 const Sidenav = () => {
   const [nav, setNav] = useState(false);
@@ -20,10 +16,10 @@ const Sidenav = () => {
 
   return (
     <div>
-      <AiOutlineMenu
-        size={30}
+      <LuMenuSquare
+        size={42}
         onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] rounded-sm border-2 border-orange-300 text-orange-300  p-1  md:hidden"
+        className="fixed top-4 right-4 z-[99] rounded-sm  text-pink-800  p-1  md:hidden cursor-pointer"
       />
       {nav && (
         <div
