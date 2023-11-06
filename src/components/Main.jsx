@@ -18,7 +18,7 @@ const Main = () => {
 
           <h2 className="flex flex-col sm:text-3xl text-2xl pt-4 text-yellow-200">
             <p className="hover:animate-pulse flip-container">
-              Web <span className="text-violet-400">Solutions </span>
+              Web <span className="text-violet-400 font-bold">Solutions </span>
               for small companies
             </p>
 
