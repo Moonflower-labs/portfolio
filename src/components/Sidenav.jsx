@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHome, AiOutlineMail, AiOutlineProject } from "react-icons/ai";
 import { MdWorkHistory } from "react-icons/md";
-import { FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle, FaRegWindowClose } from "react-icons/fa";
 import { LuMenuSquare } from "react-icons/lu";
 
 const Sidenav = () => {
@@ -15,17 +15,26 @@ const Sidenav = () => {
   };
 
   return (
-    <div>
+    <nav>
       <LuMenuSquare
         size={36}
         onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] text-orange-300 md:hidden cursor-pointer"
+        className={`fixed top-4 right-4 z-[99] text-orange-300 md:hidden cursor-pointer ${
+          !nav ? "block" : "hidden"
+        }`}
+      />
+      <FaRegWindowClose
+        size={34}
+        onClick={handleNav}
+        className={`fixed top-4 right-4 z-[99] text-purple-400 md:hidden cursor-pointer ${
+          nav ? "block" : "hidden"
+        }`}
       />
 
       {nav && (
         <div
           onClick={handleNav}
-          className="fixed top-0 left-0 w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20"
+          className="fixed top-0 backdrop-blur-sm left-0 w-full h-screen bg-zinc-100/30 flex flex-col justify-center items-center z-20 md:hidden"
         >
           <Link
             onClick={scrollToTop}
@@ -108,7 +117,7 @@ const Sidenav = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
