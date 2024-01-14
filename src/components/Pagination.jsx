@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import { PropTypes } from "prop-types";
 
 const Pagination = ({
   currentPage,
@@ -24,6 +24,12 @@ const Pagination = ({
       </button>
     </div>
   );
+};
+Pagination.propTypes = {
+  currentPage: PropTypes.number,
+  totalPages: PropTypes.number,
+  handlePreviousPage: PropTypes.func,
+  handleNextPage: PropTypes.func,
 };
 
 export default Pagination;

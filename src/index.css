@@ -6,3 +6,6 @@
   scroll-behavior: smooth !important;
   -webkit-overflow-scrolling: touch;
 }
+#root{
+  background-color: #272727;
+}

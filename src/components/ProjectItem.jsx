@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import { PropTypes } from "prop-types";
 
 const ProjectItem = ({ img, title, link, icons, action, info }) => {
   const [showInfo, setShowInfo] = useState(false);
@@ -9,13 +9,13 @@ const ProjectItem = ({ img, title, link, icons, action, info }) => {
     setShowInfo(!showInfo);
   };
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-500 rounded-xl group hover:bg-gradient-to-r from-gray-500 to-[#aa2055] ease-in duration-200 overflow-hidden">
+    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-500 rounded-xl group hover:bg-gradient-to-r from-gray-500 to-[#aa2055] ease-linear duration-300 overflow-hidden">
       <img
         src={img}
         alt={title}
-        className=" rounded-xl group-hover:opacity-10"
+        className="rounded-xl group-hover:opacity-10"
       />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <div className="opacity-0 group-hover:opacity-100 ease-linear duration-200 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
         <h3 className="md:text-2xl text-xl font-bold text-yellow-100 tracking-wider text-center">
           {title}
         </h3>
@@ -51,6 +51,14 @@ const ProjectItem = ({ img, title, link, icons, action, info }) => {
       )}
     </div>
   );
+};
+ProjectItem.propTypes = {
+  img: PropTypes.string,
+  title: PropTypes.string,
+  link: PropTypes.string,
+  icons: PropTypes.array,
+  action: PropTypes.string,
+  info: PropTypes.string,
 };
 
 export default ProjectItem;

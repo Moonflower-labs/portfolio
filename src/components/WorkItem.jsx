@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import { PropTypes } from "prop-types";
+
 const WorkItem = ({ year, title, duration, description }) => {
   return (
     <ol className=" text-orange-100  flex flex-col md:flex-row relative border-l border-pink-700">
@@ -22,6 +23,12 @@ const WorkItem = ({ year, title, duration, description }) => {
       </li>
     </ol>
   );
+};
+WorkItem.propTypes = {
+  year: PropTypes.number,
+  title: PropTypes.string,
+  duration: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default WorkItem;

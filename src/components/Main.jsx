@@ -1,11 +1,27 @@
 import { TypeAnimation } from "react-type-animation";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 import bgImage from "../assets/dbackground.jpeg";
 
 const Main = () => {
+//   const routeVariants = {
+//     initial: {
+//        opacity:0,
+//        borderRadius:'50%'
+//     },
+//     final: {
+//        opacity:1,
+//         transition:{duration:1,delay:1}
+//     }
+// }
   return (
-    <section id="main">
+    <motion.section 
+      // variants={routeVariants}
+      initial={{filter:'blur(10px)'}}
+      animate={{filter:'blur(0px)',transition:{duration:0.3}}}
+      exit={{opacity:0}}
+      id="main">
       <img
         className="w-full h-screen object-cover object-right"
         src={bgImage}
@@ -66,7 +82,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default Main;
