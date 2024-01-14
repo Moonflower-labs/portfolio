@@ -20,7 +20,7 @@ const Main = () => {
       // variants={routeVariants}
       initial={{filter:'blur(10px)'}}
       animate={{filter:'blur(0px)',transition:{duration:0.3}}}
-      exit={{opacity:0}}
+      exit={{filter:'blur(10px)'}}
       id="main">
       <img
         className="w-full h-screen object-cover object-right"
