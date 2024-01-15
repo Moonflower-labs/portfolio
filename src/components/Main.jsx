@@ -18,9 +18,9 @@ const Main = () => {
   return (
     <motion.section 
       // variants={routeVariants}
-      initial={{opacity:0,filter:'blur(10px)'}}
-      animate={{opacity:1,filter:'blur(0px)'}}
-      transition={{ duration: 0.4 }}
+      initial={{filter:'blur(10px)'}}
+      animate={{filter:'blur(0px)'}}
+      transition={{ duration: 0.6 }}
       exit={{filter:'blur(10px)'}}
       id="main">
       <img
