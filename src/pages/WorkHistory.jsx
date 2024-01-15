@@ -41,13 +41,27 @@ const data = [
 ];
 
 const WorkHistory = () => {
+  const routeVariants = {
+    initial: {
+       opacity:0,
+       filter:'blur(10px)'
+    },
+    final: {
+       opacity:1,
+       filter:'blur(0px)'
+    },
+    exit: {
+      filter:'blur(10px)'
+    }
+  }
+
   return (
     <motion.section 
-      // variants={routeVariants}
-      initial={{opacity:0,filter:'blur(10px)'}}
-      animate={{opacity:1,filter:'blur(0px)'}}
-      transition={{ duration: 0.4 }}
-      exit={{filter:'blur(10px)'}}
+      variants={routeVariants}
+      initial={'initial'}
+      animate={'final'}
+      transition={{ duration: 0.6 }}
+      exit={'exit'}
       id="workHistory" 
       className="m bg-zinc-800">
       <div className="max-w-[1040px] m-auto md:pl-20 p-4 py-16  bg-zinc-800">

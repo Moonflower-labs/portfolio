@@ -5,30 +5,38 @@ import { motion } from "framer-motion";
 import bgImage from "../assets/dbackground.jpeg";
 
 const Main = () => {
-//   const routeVariants = {
-//     initial: {
-//        opacity:0,
-//        borderRadius:'50%'
-//     },
-//     final: {
-//        opacity:1,
-//         transition:{duration:1,delay:1}
-//     }
-// }
+  const routeVariants = {
+    initial: {
+       opacity:0,
+       filter:'blur(10px)'
+    },
+    final: {
+       opacity:1,
+       filter:'blur(0px)'
+    },
+    exit: {
+      filter:'blur(10px)'
+    }
+  }
   return (
     <motion.section 
-      // variants={routeVariants}
-      initial={{filter:'blur(10px)'}}
-      animate={{filter:'blur(0px)'}}
+      variants={routeVariants}
+      initial={'initial'}
+      animate={'final'}
       transition={{ duration: 0.6 }}
-      exit={{filter:'blur(10px)'}}
+      exit={'exit'}
       id="main">
       <img
         className="w-full h-screen object-cover object-right"
         src={bgImage}
       />
       <div className="w-full text-yellow-50 h-screen absolute top-0 left-0 bg-white/20">
-        <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
+        <motion.div 
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{ duration: 0.4 }}
+          exit={{opacity:0}}
+          className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
           <h1 className="sm:text-5xl text-4xl font-bold text-violet-400">
             Moonflower Labs
           </h1>
@@ -81,7 +89,7 @@ const Main = () => {
               <AiFillGithub size={28} />
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

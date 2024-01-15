@@ -40,15 +40,29 @@ const Contact = () => {
     }
   };
 
+  const routeVariants = {
+    initial: {
+       opacity:0,
+       filter:'blur(10px)'
+    },
+    final: {
+       opacity:1,
+       filter:'blur(0px)'
+    },
+    exit: {
+      filter:'blur(10px)'
+    }
+  }
+
   return (
     <motion.div 
-        // variants={routeVariants}
-        initial={{opacity:0,filter:'blur(10px)'}}
-        animate={{opacity:1,filter:'blur(0px)'}}
-        transition={{ duration: 0.4 }}
-        exit={{filter:'blur(10px)'}}
-        id="contact" 
-        className="bg-slate-200 p-4 py-16">
+      variants={routeVariants}
+      initial={'initial'}
+      animate={'final'}
+      transition={{ duration: 0.6 }}
+      exit={'exit'}
+      id="contact" 
+      className="bg-slate-200 p-4 py-16">
       <div className="max-w-[1040px] m-auto md:pl-20">
         <h1 className=" py-4 text-3xl text-center font-bold   text-pink-700 mb-6">
           Contact Us

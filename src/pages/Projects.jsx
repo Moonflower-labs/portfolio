@@ -151,14 +151,28 @@ const Projects = () => {
     window.scrollTo(0, 0); // Scroll to top when changing pages
   }, [currentPage]);
 
+  const routeVariants = {
+    initial: {
+       opacity:0,
+       filter:'blur(10px)'
+    },
+    final: {
+       opacity:1,
+       filter:'blur(0px)'
+    },
+    exit: {
+      filter:'blur(10px)'
+    }
+  }
+
   return (
     
     <motion.section 
-      // variants={routeVariants}
-      initial={{filter:'blur(10px)'}}
-      animate={{filter:'blur(0px)'}}
-      transition={{ duration: 0.4 }}
-      exit={{filter:'blur(10px)'}}
+      variants={routeVariants}
+      initial={'initial'}
+      animate={'final'}
+      transition={{ duration: 0.6 }}
+      exit={'exit'}
       id="projects" 
       className="min-h-screen bg-slate-300">
       <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 bg-slate-300">
