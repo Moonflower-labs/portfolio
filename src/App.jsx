@@ -13,7 +13,7 @@ function App() {
     <>
       <Sidenav />
       <AnimatePresence>
-      <Routes location={location} key={location.key}>
+            <Routes location={location} key={location.key}>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<Info />} />
         <Route path="/work" element={<WorkHistory />} />
