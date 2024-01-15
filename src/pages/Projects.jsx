@@ -155,9 +155,10 @@ const Projects = () => {
     
     <motion.section 
       // variants={routeVariants}
-      initial={{opacity:0,filter:'blur(10px)'}}
-      animate={{opacity:1,filter:'blur(0px)',transition:{duration:0.3}}}
-      exit={{filter:'blur(10px)',transition:{duration:0.3}}}
+      initial={{filter:'blur(10px)'}}
+      animate={{filter:'blur(0px)'}}
+      transition={{ duration: 0.4 }}
+      exit={{filter:'blur(10px)'}}
       id="projects" 
       className="min-h-screen bg-slate-300">
       <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 bg-slate-300">
