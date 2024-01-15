@@ -3,6 +3,13 @@ import WorkItem from "../components/WorkItem";
 
 const data = [
   {
+    year: 2023,
+    title: "Mooflower Labs.",
+    duration: "Current",
+    description:
+    "Founded Moonflower Labs in 2023, a software company focused on web services. Leveraging a diverse background in the events industry and construction management, I transitioned into a new career in software development with a strong foundation in project management, attention to detail, and problem-solving abilities. Committed to adapting to new technologies and industry best practices, I continually strive to enhance my skills.",
+  },
+  {
     year: 2022,
     title: "Junior Software Developer",
     duration: "1 Year",
@@ -39,7 +46,7 @@ const WorkHistory = () => {
       // variants={routeVariants}
       initial={{opacity:0,filter:'blur(10px)'}}
       animate={{opacity:1,filter:'blur(0px)',transition:{duration:0.3}}}
-      exit={{backgroundColor:"rgb(167 139 250)",opacity:0,transition:{duration:0}}}
+      exit={{filter:'blur(10px)',transition:{duration:0.3}}}
       id="workHistory" 
       className="m bg-zinc-800">
       <div className="max-w-[1040px] m-auto md:pl-20 p-4 py-16  bg-zinc-800">

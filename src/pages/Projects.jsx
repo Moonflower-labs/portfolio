@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import ProjectItem from "../components/ProjectItem";
 import beautyImg from "../assets/beauty.jpeg";
 import weatherImg from "../assets/weatherApp.jpeg";
@@ -15,7 +17,6 @@ import { RiJavascriptLine } from "react-icons/ri";
 import { FaPython, FaCss3, FaBootstrap } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoReact } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
-import { useState, useCallback, useEffect } from "react";
 
 const projectData = [
   {
@@ -122,6 +123,11 @@ const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
   const totalPages = Math.ceil(projectData.length / itemsPerPage);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  
   const handlePreviousPage = useCallback(() => {
     setCurrentPage((prevPage) => prevPage - 1);
   }, []);
@@ -129,17 +135,29 @@ const Projects = () => {
   const handleNextPage = useCallback(() => {
     setCurrentPage((prevPage) => prevPage + 1);
   }, []);
+ const handleClickPage = useCallback((e) => {
+  setCurrentPage(parseInt(e.target.value));
+  navigate(`?page=${parseInt(e.target.value)}`);
+ },[navigate]);
+
+ useEffect(() => {
+  const searchParams = new URLSearchParams(location.search);
+  const page = searchParams.get('page');
+  const parsedPage = page ? parseInt(page) : 1;
+  setCurrentPage(parsedPage);
+}, [location.search]);
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top when changing pages
   }, [currentPage]);
 
   return (
+    
     <motion.section 
       // variants={routeVariants}
       initial={{opacity:0,filter:'blur(10px)'}}
       animate={{opacity:1,filter:'blur(0px)',transition:{duration:0.3}}}
-      exit={{backgroundColor:"rgb(167 139 250)",opacity:0,transition:{duration:0}}}
+      exit={{filter:'blur(10px)',transition:{duration:0.3}}}
       id="projects" 
       className="min-h-screen bg-slate-300">
       <div className="max-w-[1024px] m-auto md:pl-20 p-4 py-16 bg-slate-300">
@@ -148,7 +166,7 @@ const Projects = () => {
         </h1>
         <p className="text-center py-8">
           These are just a few examples of the diverse projects we have
-          delivered to our clients.
+          built. 
         </p>
         {projectData ? (
           <div className="grid sm:grid-cols-2 gap-12 ">
@@ -177,11 +195,12 @@ const Projects = () => {
       </div>
       {projectData && projectData.length > itemsPerPage && (
         <Pagination
-          currentPage={currentPage}
+          currentPage={parseInt(currentPage)}
           setCurrentPage={setCurrentPage}
           totalPages={totalPages}
           handlePreviousPage={handlePreviousPage}
           handleNextPage={handleNextPage}
+          handleClickPage={handleClickPage}
         />
       )}
     </motion.section>

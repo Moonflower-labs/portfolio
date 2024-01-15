@@ -8,7 +8,7 @@ const Info = () => {
       // variants={routeVariants}
       initial={{opacity:0,filter:'blur(10px)'}}
       animate={{opacity:1,filter:'blur(0px)',transition:{duration:0.3}}}
-      exit={{backgroundColor:"rgb(167 139 250)",opacity:0,transition:{duration:0}}}
+      exit={{filter:'blur(10px)',transition:{duration:0.3}}}
       className="min-h-screen bg-slate-300 flex flex-col">
       <About />
       <Services />
