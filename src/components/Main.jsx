@@ -34,7 +34,7 @@ const Main = () => {
         <motion.div 
           initial={{opacity:0}}
           animate={{opacity:1}}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.4,delay:0.5 }}
           exit={{opacity:0}}
           className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
           <h1 className="sm:text-5xl text-4xl font-bold text-violet-400">
