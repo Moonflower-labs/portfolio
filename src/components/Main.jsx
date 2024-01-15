@@ -32,12 +32,7 @@ const Main = () => {
         src={bgImage}
       />
       <div className="w-full text-yellow-50 h-screen absolute top-0 left-0 bg-white/20">
-        <motion.div 
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{ duration: 0.4}}
-          exit={{opacity:0}}
-          className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
+        <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
           <h1 className="sm:text-5xl text-4xl font-bold text-violet-400">
             Moonflower Labs
           </h1>
@@ -90,7 +85,7 @@ const Main = () => {
               <AiFillGithub size={28} />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );
